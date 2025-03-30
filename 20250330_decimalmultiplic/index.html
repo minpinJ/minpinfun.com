@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decimal Multiplication Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Audio sources -->
+  <audio id="background-music" loop preload="auto">
+    <source src="sounds/background.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="success-sound" preload="auto">
+    <source src="sounds/success.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="wrong-sound" preload="auto">
+    <source src="sounds/hit.mp3" type="audio/mpeg">
+  </audio>
+  
+  <!-- Audio control -->
+  <div class="audio-control">
+    <button id="toggle-sound" class="btn-icon">
+      <span class="icon">🔊</span>
+    </button>
+  </div>
+  
+  <div class="container">
+    <header>
+      <h1>Decimal Multiplication</h1>
+      <p>Test your skills with decimal numbers multiplication!</p>
+    </header>
+    
+    <main id="game-container">
+      <!-- Instruction Screen -->
+      <div id="instruction-screen" class="game-screen">
+        <h2>Welcome to Decimal Multiplication</h2>
+        
+        <div class="instructions-box">
+          <h3>How to Play:</h3>
+          <ul>
+            <li>
+              <span class="number">1</span>
+              <span>You will be presented with 10 decimal multiplication problems.</span>
+            </li>
+            <li>
+              <span class="number">2</span>
+              <span>Select the correct answer from the 3 options provided.</span>
+            </li>
+            <li>
+              <span class="number">3</span>
+              <span>Earn points for each correct answer.</span>
+            </li>
+          </ul>
+          
+          <div class="examples">
+            <h4>Examples:</h4>
+            <p>0.3 × 2 = 0.6</p>
+            <p>0.5 × 0.7 = 0.35</p>
+            <p>0.25 × 4 = 1</p>
+          </div>
+          
+          <p class="note">Remember to line up decimal points and multiply like regular numbers!</p>
+        </div>
+        
+        <button id="start-button" class="btn btn-primary">Start Game</button>
+      </div>
+      
+      <!-- Game Screen -->
+      <div id="game-screen" class="game-screen">
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+          <div>
+            <h3>Score</h3>
+            <p id="score">0</p>
+          </div>
+          <div>
+            <h3>Correct</h3>
+            <p id="correct-count">0/0</p>
+          </div>
+          <div>
+            <h3>Accuracy</h3>
+            <p id="accuracy">0%</p>
+          </div>
+        </div>
+        
+        <!-- Progress -->
+        <div class="progress-container">
+          <div class="progress-info">
+            <span id="question-number">Question 1 of 10</span>
+            <span id="progress-percentage">10%</span>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+        </div>
+        
+        <!-- Question -->
+        <div class="question-container">
+          <h2>Solve the equation:</h2>
+          <div id="question-text">0.5 × 2 = ?</div>
+        </div>
+        
+        <!-- Answers -->
+        <div id="answers" class="answers-container">
+          <!-- Answer buttons will be generated dynamically -->
+        </div>
+        
+        <!-- Feedback -->
+        <div id="feedback" class="feedback hidden">
+          Correct! Well done!
+        </div>
+      </div>
+      
+      <!-- Complete Screen -->
+      <div id="complete-screen" class="game-screen">
+        <h2>Game Complete!</h2>
+        
+        <div class="results-container">
+          <h3>Your Results</h3>
+          
+          <div class="result-item">
+            <span>Final Score:</span>
+            <span id="final-score">0/10</span>
+          </div>
+          
+          <div class="result-item">
+            <span>Accuracy:</span>
+            <span id="final-percentage">0%</span>
+          </div>
+          
+          <div class="final-progress-bar">
+            <div id="final-progress-fill"></div>
+          </div>
+          
+          <p id="final-message">Keep practicing to improve!</p>
+        </div>
+        
+        <button id="restart-button" class="btn btn-primary">Play Again</button>
+      </div>
+    </main>
+  </div>
+  
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas" class="hidden"></canvas>
+  
+  <script src="script.js"></script>
+</body>
+</html>
