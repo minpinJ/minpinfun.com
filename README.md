@@ -8,4 +8,4 @@
 ## Have fun!
 
 ## [Decimal Multiplication game](/20250330_decimalmultiplic/)
-## [Sum Up to 10](/20250330_SumUpTo10/)
+## [Sum Up to 10](/20250330_SumUpto10/)
