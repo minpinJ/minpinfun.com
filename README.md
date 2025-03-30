@@ -7,3 +7,4 @@
 ##### Feel free to choose according to your age.
 ###### Have fun!
 
+# [Decimal Multiplication game](/20250330_decimalmultiplic/)
