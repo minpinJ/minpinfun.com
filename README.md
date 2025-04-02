@@ -8,7 +8,7 @@
 
 ## Forms 3/4
 ### [Decimal Multiplication game](/20250330_decimalmultiplic/)
-### [Ronaldo fans quiz](/20250401 Ronaldo/)
+### [Ronaldo fans quiz](/20250402_Ronaldo/)
 
 ## Prep
 ### [Sum Up to 10](/20250330_SumUpto10/)
